@@ -2,39 +2,39 @@
 const questions = [
     { 
         question: 'Which tag is used to insert an image in HTML?', 
-        options: ['<pic>', '<image>', '<img>', '<src>'], 
-        answer: '<img>' 
+        options: ['&lt;pic&gt;', '&lt;image&gt;', '&lt;img&gt;', '&lt;src&gt;'], 
+        answer: '&lt;img&gt;' 
     },
     { 
-        question: 'What does the `&lt;a&gt;` tag define?', 
+        question: 'What does the &lt;a&gt; tag define?', 
         options: ['An article', 'An anchor link', 'An abbreviation', 'An aside'], 
         answer: 'An anchor link' 
     },
     { 
         question: 'What is the correct way to define an unordered list?', 
-        options: ['<ul>', '<ol>', '<list>', '<unordered>'], 
-        answer: '<ul>' 
+        options: ['&lt;ul&gt;', '&lt;ol&gt;', '&lt;list&gt;', '&lt;unordered&gt;'], 
+        answer: '&lt;ul&gt;' 
     },
     { 
         question: 'Which tag is used for inserting a line break in HTML?', 
-        options: ['<lb>', '<br>', '<break>', '<newline>'], 
-        answer: '<br>' 
+        options: ['&lt;lb&gt;', '&lt;br&gt;', '&lt;break&gt;', '&lt;newline&gt;'], 
+        answer: '&lt;br&gt;' 
     },
     { 
         question: 'Which tag is used for the largest heading in HTML?', 
-        options: ['<h6>', '<h1>', '<heading>', '<title>'], 
-        answer: '<h1>' 
+        options: ['&lt;h6&gt;', '&lt;h1&gt;', '&lt;heading&gt;', '&lt;title&gt;'], 
+        answer: '&lt;h1&gt;' 
     },
 
     { 
         question: 'What is the correct way to define a paragraph in HTML?', 
-        options: ['<p>', '<para>', '<paragraph>', '<text>'], 
-        answer: '<p>' 
+        options: ['&lt;p&gt;', '&lt;para&gt;', '&lt;paragraph&gt;', '&lt;text&gt;'], 
+        answer: '&lt;p&gt;' 
     },
     { 
         question: 'Which tag is used to define a table row?', 
-        options: ['<tr>', '<td>', '<th>', '<row>'], 
-        answer: '<tr>' 
+        options: ['&lt;tr&gt;', '&lt;td&gt;', '&lt;th&gt;', '&lt;row&gt;'], 
+        answer: '&lt;tr&gt;' 
     },
     { 
         question: 'Which attribute is used to specify an image source?', 
@@ -48,35 +48,35 @@ const questions = [
     },
     { 
         question: 'Which tag is used to define a form in HTML?', 
-        options: ['<form>', '<input>', '<fieldset>', '<submit>'], 
-        answer: '<form>' 
+        options: ['&lt;form&gt;', '&lt;input&gt;', '&lt;fieldset&gt;', '&lt;submit&gt;'], 
+        answer: '&lt;form&gt;' 
     },
 
     { 
         question: 'Which tag is used for the main content of a webpage?', 
-        options: ['<main>', '<body>', '<section>', '<div>'], 
-        answer: '<main>' 
+        options: ['&lt;main&gt;', '&lt;body&gt;', '&lt;section&gt;', '&lt;div&gt;'], 
+        answer: '&lt;main&gt;' 
     },
     { 
         question: 'What is the output of the following HTML?', 
         code: '&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; text&lt;/p&gt;', 
-        options: ['This is bold text', 'This is <b>bold</b> text', 'This is &lt;b&gt;bold&lt;/b&gt; text', 'Error'], 
+        options: ['This is bold text', 'This is <b>bold</b> text', 'This is BOLD text', 'Error'], 
         answer: 'This is <b>bold</b> text' 
     },
     { 
         question: 'Which of the following is a correct self-closing tag?', 
-        options: ['<br>', '<div>', '<p>', '<h1>'], 
-        answer: '<br>' 
+        options: ['&lt;br&gt;', '&lt;div&gt;', '&lt;p&gt;', '&lt;h1&gt;'], 
+        answer: '&lt;br&gt;' 
     },
     { 
-        question: 'What does the `&lt;meta&gt;` tag do?', 
+        question: 'What does the &lt;meta&gt; tag do?', 
         options: ['Defines metadata', 'Creates a paragraph', 'Adds an image', 'Links a CSS file'], 
         answer: 'Defines metadata' 
     },
     { 
         question: 'Which tag is used to create a dropdown list?', 
-        options: ['<dropdown>', '<select>', '<list>', '<option>'], 
-        answer: '<select>' 
+        options: ['&lt;dropdown&gt;', '&lt;select&gt;', '&lt;list&gt;', '&lt;option&gt;'], 
+        answer: '&lt;select&gt;' 
     },
 
     { 
@@ -87,8 +87,8 @@ const questions = [
     },
     { 
         question: 'Which tag is used to group block elements in HTML?', 
-        options: ['<span>', '<div>', '<section>', '<article>'], 
-        answer: '<div>' 
+        options: ['&lt;span&gt;', '&lt;div&gt;', '&lt;section&gt;', '&lt;article&gt;'], 
+        answer: '&lt;div&gt;' 
     },
     { 
         question: 'What will be the output of this code?', 
@@ -98,24 +98,24 @@ const questions = [
     },
     { 
         question: 'Which tag is used to create a numbered list?', 
-        options: ['<ol>', '<ul>', '<list>', '<numlist>'], 
-        answer: '<ol>' 
+        options: ['&lt;ol&gt;', '&lt;ul&gt;', '&lt;list&gt;', '&lt;numlist&gt;'], 
+        answer: '&lt;ol&gt;' 
     },
     { 
         question: 'Which tag is used to insert a horizontal line?', 
-        options: ['<line>', '<hr>', '<br>', '<hl>'], 
-        answer: '<hr>' 
+        options: ['&lt;line&gt;', '&lt;hr&gt;', '&lt;br&gt;', '&lt;hl&gt;'], 
+        answer: '&lt;hr&gt;' 
     },
 
     { 
         question: 'Which tag is used to define the footer of a webpage?', 
-        options: ['<footer>', '<bottom>', '<end>', '<section>'], 
-        answer: '<footer>' 
+        options: ['&lt;footer&gt;', '&lt;bottom&gt;', '&lt;end&gt;', '&lt;section&gt;'], 
+        answer: '&lt;footer&gt;' 
     },
     { 
         question: 'Which tag is used to link an external CSS file?', 
-        options: ['<link>', '<style>', '<css>', '<head>'], 
-        answer: '<link>' 
+        options: ['&lt;link&gt;', '&lt;style&gt;', '&lt;css&gt;', '&lt;head&gt;'], 
+        answer: '&lt;link&gt;' 
     },
     { 
         question: 'What does the `target="_blank"` attribute do in an anchor tag?', 
@@ -130,8 +130,8 @@ const questions = [
     },
     { 
         question: 'Which tag is used to create an interactive text field?', 
-        options: ['<input>', '<text>', '<field>', '<textarea>'], 
-        answer: '<input>' 
+        options: ['&lt;input&gt;', '&lt;text&gt;', '&lt;field&gt;', '&lt;textarea&gt;'], 
+        answer: '&lt;input&gt;' 
     }
 ];
 
@@ -205,13 +205,13 @@ function displayQuestion() {
     answerOptions.innerHTML = "";
 
     // Create answer buttons
-    currentQuestion.options.forEach(option => {
-        const button = document.createElement("button");
-        button.innerText = option;
-        button.classList.add("answer-button");
-        button.onclick = () => selectAnswer(button, currentQuestion.answer);
-        answerOptions.appendChild(button);
-    });
+currentQuestion.options.forEach(option => {
+    const button = document.createElement("button");
+    button.innerHTML = option; // ✅ Use innerHTML instead of innerText
+    button.classList.add("answer-button");
+    button.onclick = () => selectAnswer(button, currentQuestion.answer);
+    answerOptions.appendChild(button);
+});
 }
 
 // 6. Handle Answer Selection
@@ -279,7 +279,7 @@ nextButton.addEventListener("click", () => {
 // 8. Update Score Functionality
 function updateScore() {
     scoreTracker.innerHTML = `
-    Correct Answers: ${correctAnswers} / ${uniqueQuestionsSeen} <br>
+    Total: ${correctAnswers} / ${uniqueQuestionsSeen} <br>
     Mastery: ${((uniqueCorrectQuestions.size / Math.max(uniqueQuestionsSet.size, 1)) * 100).toFixed(2)}%
 `;
 }
