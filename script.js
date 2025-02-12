@@ -1,175 +1,191 @@
 // 1. Store Questions
 const questions = [
-    { 
-        question: 'What will be the output of the following code?', 
-        code: 'console.log(typeof null);', 
-        options: ['null', 'object', 'undefined', 'boolean'], 
-        answer: 'object' 
+    {
+        question: "What will be the output of the following code?",
+        code: "<h1>Hello World</h1><h2>Welcome</h2>",
+        options: [
+            "Hello World (large text), Welcome (smaller text)",
+            "Hello World and Welcome in the same size",
+            "Syntax error",
+            "Only 'Hello World' is displayed"
+        ],
+        answer: "Hello World (large text), Welcome (smaller text)"
     },
-    { 
-        question: 'What does NaN stand for in JavaScript?', 
-        options: ['Not a Number', 'Null and None', 'Negative and Null', 'Non-Assigned Name'], 
-        answer: 'Not a Number' 
+    {
+        question: "Which HTML tag is used to define a hyperlink?",
+        options: ["<link>", "<a>", "<href>", "<hlink>"],
+        answer: "<a>"
     },
-    { 
-        question: 'What is the output of the following code?', 
-        code: 'console.log(5 == "5");', 
-        options: ['true', 'false', 'TypeError', 'NaN'], 
-        answer: 'true' 
+    {
+        question: "What does the `<meta charset='UTF-8'>` tag do?",
+        options: [
+            "It defines the character encoding for the document",
+            "It adds metadata for SEO",
+            "It creates a new character set",
+            "It links an external CSS file"
+        ],
+        answer: "It defines the character encoding for the document"
     },
-    { 
-        question: 'What is the output of the following?', 
-        code: 'console.log(Boolean([]));', 
-        options: ['true', 'false', 'undefined', 'Error'], 
-        answer: 'true' 
+    {
+        question: "What is the correct way to create an HTML comment?",
+        options: [
+            "// This is a comment",
+            "/* This is a comment */",
+            "<!-- This is a comment -->",
+            "# This is a comment"
+        ],
+        answer: "<!-- This is a comment -->"
     },
-    { 
-        question: 'Which keyword is used to declare a constant variable in JavaScript?', 
-        options: ['var', 'let', 'const', 'define'], 
-        answer: 'const' 
+    {
+        question: "Which HTML element is used to embed JavaScript code?",
+        options: ["<javascript>", "<js>", "<script>", "<code>"],
+        answer: "<script>"
     },
-
-    { 
-        question: 'What is the output of the following code?', 
-        code: 'let x; console.log(x);', 
-        options: ['null', 'undefined', 'Error', '0'], 
-        answer: 'undefined' 
+    {
+        question: "What will be the output of the following HTML?",
+        code: "<p>First Paragraph</p><p>Second Paragraph</p>",
+        options: [
+            "Both paragraphs appear on the same line",
+            "Second paragraph replaces the first",
+            "Paragraphs appear on separate lines",
+            "Syntax error"
+        ],
+        answer: "Paragraphs appear on separate lines"
     },
-    { 
-        question: 'Which of the following is NOT a primitive data type in JavaScript?', 
-        options: ['Boolean', 'String', 'Object', 'Number'], 
-        answer: 'Object' 
+    {
+        question: "Which tag is used for inserting an image in HTML?",
+        options: ["<image>", "<pic>", "<img>", "<src>"],
+        answer: "<img>"
     },
-    { 
-        question: 'What will be the output?', 
-        code: 'console.log(typeof NaN);', 
-        options: ['number', 'NaN', 'undefined', 'object'], 
-        answer: 'number' 
+    {
+        question: "Which tag is used to create a table row?",
+        options: ["<td>", "<tr>", "<th>", "<table-row>"],
+        answer: "<tr>"
     },
-    { 
-        question: 'What is the output of the following code?', 
-        code: 'console.log(typeof([]));', 
-        options: ['array', 'object', 'undefined', 'null'], 
-        answer: 'object' 
+    {
+        question: "What will the following HTML display?",
+        code: "<ol><li>Item 1</li><li>Item 2</li></ol>",
+        options: [
+            "A bulleted list",
+            "An ordered list with numbers",
+            "A table",
+            "Nothing, the syntax is incorrect"
+        ],
+        answer: "An ordered list with numbers"
     },
-    { 
-        question: 'What will be the output of the following code?', 
-        code: 'let a = "5" + 5; console.log(a);', 
-        options: ['10', "'55'", '5', 'Error'], 
-        answer: "'55'" 
+    {
+        question: "What is the correct way to create a text input field in a form?",
+        options: [
+            "<input type='text'>",
+            "<text-input>",
+            "<form-text>",
+            "<textfield>"
+        ],
+        answer: "<input type='text'>"
     },
-
-    { 
-        question: 'What is the output of the following function call?', 
-        code: 
-        'function sayHello() {\n' +
-        '    return "Hello";\n' +
-        '}\n' +
-        'console.log(sayHello);', 
-        options: ['Hello', 'undefined', '[Function: sayHello]', 'TypeError'], 
-        answer: '[Function: sayHello]' 
+    {
+        question: "What will the following HTML code display?",
+        code: "<div style='display: none;'>Hidden text</div>",
+        options: [
+            "Hidden text will be visible",
+            "Hidden text will not be displayed",
+            "Error: 'display: none;' is not a valid CSS rule",
+            "The div will be displayed but with no text inside"
+        ],
+        answer: "Hidden text will not be displayed"
     },
-    { 
-        question: 'What will be the output?', 
-        code: 
-        'function sum(a, b) {\n' +
-        '    console.log(a + b);\n' +
-        '}\n' +
-        'sum(2);', 
-        options: ['2', 'NaN', 'undefined', 'Error'], 
-        answer: 'NaN' 
+    {
+        question: "Which HTML tag is used for adding a description list?",
+        options: ["<dl>", "<list>", "<ul>", "<ol>"],
+        answer: "<dl>"
     },
-    { 
-        question: 'Which keyword is used to define a function?', 
-        options: ['func', 'def', 'function', 'method'], 
-        answer: 'function' 
+    {
+        question: "What will happen if you use `<input type='checkbox'>`?",
+        options: [
+            "A radio button will be displayed",
+            "A checkbox will be displayed",
+            "A button will be displayed",
+            "A text input field will be displayed"
+        ],
+        answer: "A checkbox will be displayed"
     },
-    { 
-        question: 'What is the output of this immediately invoked function expression (IIFE)?', 
-        code: '(function() { return "Hello"; })();', 
-        options: ['Hello', 'undefined', 'TypeError', 'null'], 
-        answer: 'Hello' 
+    {
+        question: "Which HTML attribute is used to provide alternative text for an image?",
+        options: ["alt", "title", "src", "desc"],
+        answer: "alt"
     },
-    { 
-        question: 'What will this return?', 
-        code: 
-        'function multiply(a, b = 2) {\n' +
-        '    return a * b;\n' +
-        '}\n' +
-        'console.log(multiply(5));', 
-        options: ['10', '5', 'undefined', 'NaN'], 
-        answer: '10' 
+    {
+        question: "What is the purpose of the `<iframe>` tag?",
+        options: [
+            "To insert an image into a webpage",
+            "To create an inline frame within a webpage",
+            "To display bold text",
+            "To define a new section in a webpage"
+        ],
+        answer: "To create an inline frame within a webpage"
     },
-
-    { 
-        question: 'What will be the output of the following loop?', 
-        code: 
-        'for (let i = 0; i < 3; i++) {\n' +
-        '    console.log(i);\n' +
-        '}', 
-        options: ['0 1 2', '1 2 3', '0 1 2 3', 'Error'], 
-        answer: '0 1 2' 
+    {
+        question: "Which HTML5 element is used to define navigation links?",
+        options: ["<nav>", "<menu>", "<sidebar>", "<header>"],
+        answer: "<nav>"
     },
-    { 
-        question: 'What will be the output?', 
-        code: 
-        'let i = 0;\n' +
-        'while (i < 3) {\n' +
-        '    console.log(i);\n' +
-        '    i++;\n' +
-        '}', 
-        options: ['0 1 2', '1 2 3', '0 1 2 3', 'Error'], 
-        answer: '0 1 2' 
+    {
+        question: "Which HTML element is used to play audio files?",
+        options: ["<sound>", "<audio>", "<mp3>", "<voice>"],
+        answer: "<audio>"
     },
-    { 
-        question: 'What will be printed?', 
-        code: 
-        'let i = 0;\n' +
-        'do {\n' +
-        '    console.log(i);\n' +
-        '    i++;\n' +
-        '} while (i < 3);', 
-        options: ['0 1 2', '1 2 3', '0 1 2 3', 'Error'], 
-        answer: '0 1 2' 
+    {
+        question: "What will be the output of this code?",
+        code: "<span style='font-weight: bold;'>Bold Text</span>",
+        options: [
+            "Text will be displayed normally",
+            "Text will be bold",
+            "Syntax error",
+            "Text will be italic"
+        ],
+        answer: "Text will be bold"
     },
-
-    { 
-        question: 'What will be the output?', 
-        code: 
-        'let obj = { name: "John", age: 30 };\n' +
-        'console.log(obj.name);', 
-        options: ['John', '30', 'undefined', 'Error'], 
-        answer: 'John' 
+    {
+        question: "What is the default display property of a `<div>`?",
+        options: ["inline", "block", "inline-block", "none"],
+        answer: "block"
     },
-    { 
-        question: 'What will be the output?', 
-        code: 
-        'let arr = [10, 20, 30];\n' +
-        'console.log(arr.length);', 
-        options: ['2', '3', '4', 'Error'], 
-        answer: '3' 
+    {
+        question: "What will be the output of the following HTML?",
+        code: "<button disabled>Click Me</button>",
+        options: [
+            "Button will be clickable",
+            "Button will be disabled",
+            "Button will be invisible",
+            "Button will turn red"
+        ],
+        answer: "Button will be disabled"
     },
-    { 
-        question: 'What will be printed?', 
-        code: 
-        'let obj = { name: "Jane" };\n' +
-        'console.log(obj["name"]);', 
-        options: ['Jane', 'undefined', 'Error', 'null'], 
-        answer: 'Jane' 
+    {
+        question: "Which HTML tag is used to define a footer for a document?",
+        options: ["<footer>", "<bottom>", "<foot>", "<end>"],
+        answer: "<footer>"
     },
-    { 
-        question: 'Which method removes the last element from an array?', 
-        options: ['pop()', 'shift()', 'remove()', 'splice()'], 
-        answer: 'pop()' 
+    {
+        question: "Which tag is used to group multiple form elements?",
+        options: ["<fieldset>", "<group>", "<formgroup>", "<container>"],
+        answer: "<fieldset>"
     },
-    { 
-        question: 'What will this return?', 
-        code: 
-        'let arr = [1, 2, 3];\n' +
-        'arr.push(4);\n' +
-        'console.log(arr);', 
-        options: ['[1,2,3,4]', '[1,2,3]', '[4,1,2,3]', 'Error'], 
-        answer: '[1,2,3,4]' 
+    {
+        question: "What will be the output of this HTML?",
+        code: "<abbr title='World Health Organization'>WHO</abbr>",
+        options: [
+            "Displays 'WHO' with no effect",
+            "Displays 'WHO' with a tooltip when hovered",
+            "Displays 'World Health Organization'",
+            "Displays 'WHO' in italics"
+        ],
+        answer: "Displays 'WHO' with a tooltip when hovered"
+    },
+    {
+        question: "Which tag is used to define emphasized text in HTML?",
+        options: ["<em>", "<i>", "<b>", "<strong>"],
+        answer: "<em>"
     }
 ];
 
