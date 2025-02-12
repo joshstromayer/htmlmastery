@@ -1,191 +1,137 @@
 // 1. Store Questions
 const questions = [
-    {
-        question: "What will be the output of the following code?",
-        code: "<h1>Hello World</h1><h2>Welcome</h2>",
-        options: [
-            "Hello World (large text), Welcome (smaller text)",
-            "Hello World and Welcome in the same size",
-            "Syntax error",
-            "Only 'Hello World' is displayed"
-        ],
-        answer: "Hello World (large text), Welcome (smaller text)"
+    { 
+        question: 'Which tag is used to insert an image in HTML?', 
+        options: ['<pic>', '<image>', '<img>', '<src>'], 
+        answer: '<img>' 
     },
-    {
-        question: "Which HTML tag is used to define a hyperlink?",
-        options: ["<link>", "<a>", "<href>", "<hlink>"],
-        answer: "<a>"
+    { 
+        question: 'What does the `&lt;a&gt;` tag define?', 
+        options: ['An article', 'An anchor link', 'An abbreviation', 'An aside'], 
+        answer: 'An anchor link' 
     },
-    {
-        question: "What does the `<meta charset='UTF-8'>` tag do?",
-        options: [
-            "It defines the character encoding for the document",
-            "It adds metadata for SEO",
-            "It creates a new character set",
-            "It links an external CSS file"
-        ],
-        answer: "It defines the character encoding for the document"
+    { 
+        question: 'What is the correct way to define an unordered list?', 
+        options: ['<ul>', '<ol>', '<list>', '<unordered>'], 
+        answer: '<ul>' 
     },
-    {
-        question: "What is the correct way to create an HTML comment?",
-        options: [
-            "// This is a comment",
-            "/* This is a comment */",
-            "<!-- This is a comment -->",
-            "# This is a comment"
-        ],
-        answer: "<!-- This is a comment -->"
+    { 
+        question: 'Which tag is used for inserting a line break in HTML?', 
+        options: ['<lb>', '<br>', '<break>', '<newline>'], 
+        answer: '<br>' 
     },
-    {
-        question: "Which HTML element is used to embed JavaScript code?",
-        options: ["<javascript>", "<js>", "<script>", "<code>"],
-        answer: "<script>"
+    { 
+        question: 'Which tag is used for the largest heading in HTML?', 
+        options: ['<h6>', '<h1>', '<heading>', '<title>'], 
+        answer: '<h1>' 
     },
-    {
-        question: "What will be the output of the following HTML?",
-        code: "<p>First Paragraph</p><p>Second Paragraph</p>",
-        options: [
-            "Both paragraphs appear on the same line",
-            "Second paragraph replaces the first",
-            "Paragraphs appear on separate lines",
-            "Syntax error"
-        ],
-        answer: "Paragraphs appear on separate lines"
+
+    { 
+        question: 'What is the correct way to define a paragraph in HTML?', 
+        options: ['<p>', '<para>', '<paragraph>', '<text>'], 
+        answer: '<p>' 
     },
-    {
-        question: "Which tag is used for inserting an image in HTML?",
-        options: ["<image>", "<pic>", "<img>", "<src>"],
-        answer: "<img>"
+    { 
+        question: 'Which tag is used to define a table row?', 
+        options: ['<tr>', '<td>', '<th>', '<row>'], 
+        answer: '<tr>' 
     },
-    {
-        question: "Which tag is used to create a table row?",
-        options: ["<td>", "<tr>", "<th>", "<table-row>"],
-        answer: "<tr>"
+    { 
+        question: 'Which attribute is used to specify an image source?', 
+        options: ['href', 'src', 'alt', 'link'], 
+        answer: 'src' 
     },
-    {
-        question: "What will the following HTML display?",
-        code: "<ol><li>Item 1</li><li>Item 2</li></ol>",
-        options: [
-            "A bulleted list",
-            "An ordered list with numbers",
-            "A table",
-            "Nothing, the syntax is incorrect"
-        ],
-        answer: "An ordered list with numbers"
+    { 
+        question: 'What does the `alt` attribute provide for images?', 
+        options: ['A tooltip', 'An alternative text', 'A hyperlink', 'A title'], 
+        answer: 'An alternative text' 
     },
-    {
-        question: "What is the correct way to create a text input field in a form?",
-        options: [
-            "<input type='text'>",
-            "<text-input>",
-            "<form-text>",
-            "<textfield>"
-        ],
-        answer: "<input type='text'>"
+    { 
+        question: 'Which tag is used to define a form in HTML?', 
+        options: ['<form>', '<input>', '<fieldset>', '<submit>'], 
+        answer: '<form>' 
     },
-    {
-        question: "What will the following HTML code display?",
-        code: "<div style='display: none;'>Hidden text</div>",
-        options: [
-            "Hidden text will be visible",
-            "Hidden text will not be displayed",
-            "Error: 'display: none;' is not a valid CSS rule",
-            "The div will be displayed but with no text inside"
-        ],
-        answer: "Hidden text will not be displayed"
+
+    { 
+        question: 'Which tag is used for the main content of a webpage?', 
+        options: ['<main>', '<body>', '<section>', '<div>'], 
+        answer: '<main>' 
     },
-    {
-        question: "Which HTML tag is used for adding a description list?",
-        options: ["<dl>", "<list>", "<ul>", "<ol>"],
-        answer: "<dl>"
+    { 
+        question: 'What is the output of the following HTML?', 
+        code: '&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; text&lt;/p&gt;', 
+        options: ['This is bold text', 'This is <b>bold</b> text', 'This is &lt;b&gt;bold&lt;/b&gt; text', 'Error'], 
+        answer: 'This is <b>bold</b> text' 
     },
-    {
-        question: "What will happen if you use `<input type='checkbox'>`?",
-        options: [
-            "A radio button will be displayed",
-            "A checkbox will be displayed",
-            "A button will be displayed",
-            "A text input field will be displayed"
-        ],
-        answer: "A checkbox will be displayed"
+    { 
+        question: 'Which of the following is a correct self-closing tag?', 
+        options: ['<br>', '<div>', '<p>', '<h1>'], 
+        answer: '<br>' 
     },
-    {
-        question: "Which HTML attribute is used to provide alternative text for an image?",
-        options: ["alt", "title", "src", "desc"],
-        answer: "alt"
+    { 
+        question: 'What does the `&lt;meta&gt;` tag do?', 
+        options: ['Defines metadata', 'Creates a paragraph', 'Adds an image', 'Links a CSS file'], 
+        answer: 'Defines metadata' 
     },
-    {
-        question: "What is the purpose of the `<iframe>` tag?",
-        options: [
-            "To insert an image into a webpage",
-            "To create an inline frame within a webpage",
-            "To display bold text",
-            "To define a new section in a webpage"
-        ],
-        answer: "To create an inline frame within a webpage"
+    { 
+        question: 'Which tag is used to create a dropdown list?', 
+        options: ['<dropdown>', '<select>', '<list>', '<option>'], 
+        answer: '<select>' 
     },
-    {
-        question: "Which HTML5 element is used to define navigation links?",
-        options: ["<nav>", "<menu>", "<sidebar>", "<header>"],
-        answer: "<nav>"
+
+    { 
+        question: 'What will be the output of this code?', 
+        code: '&lt;h2&gt;Welcome&lt;/h2&gt;', 
+        options: ['Welcome (biggest size)', 'Welcome (smallest size)', 'Welcome (medium size)', 'Error'], 
+        answer: 'Welcome (medium size)' 
     },
-    {
-        question: "Which HTML element is used to play audio files?",
-        options: ["<sound>", "<audio>", "<mp3>", "<voice>"],
-        answer: "<audio>"
+    { 
+        question: 'Which tag is used to group block elements in HTML?', 
+        options: ['<span>', '<div>', '<section>', '<article>'], 
+        answer: '<div>' 
     },
-    {
-        question: "What will be the output of this code?",
-        code: "<span style='font-weight: bold;'>Bold Text</span>",
-        options: [
-            "Text will be displayed normally",
-            "Text will be bold",
-            "Syntax error",
-            "Text will be italic"
-        ],
-        answer: "Text will be bold"
+    { 
+        question: 'What will be the output of this code?', 
+        code: '&lt;button&gt;Click me&lt;/button&gt;', 
+        options: ['A clickable button', 'A bold text "Click me"', 'A link', 'Error'], 
+        answer: 'A clickable button' 
     },
-    {
-        question: "What is the default display property of a `<div>`?",
-        options: ["inline", "block", "inline-block", "none"],
-        answer: "block"
+    { 
+        question: 'Which tag is used to create a numbered list?', 
+        options: ['<ol>', '<ul>', '<list>', '<numlist>'], 
+        answer: '<ol>' 
     },
-    {
-        question: "What will be the output of the following HTML?",
-        code: "<button disabled>Click Me</button>",
-        options: [
-            "Button will be clickable",
-            "Button will be disabled",
-            "Button will be invisible",
-            "Button will turn red"
-        ],
-        answer: "Button will be disabled"
+    { 
+        question: 'Which tag is used to insert a horizontal line?', 
+        options: ['<line>', '<hr>', '<br>', '<hl>'], 
+        answer: '<hr>' 
     },
-    {
-        question: "Which HTML tag is used to define a footer for a document?",
-        options: ["<footer>", "<bottom>", "<foot>", "<end>"],
-        answer: "<footer>"
+
+    { 
+        question: 'Which tag is used to define the footer of a webpage?', 
+        options: ['<footer>', '<bottom>', '<end>', '<section>'], 
+        answer: '<footer>' 
     },
-    {
-        question: "Which tag is used to group multiple form elements?",
-        options: ["<fieldset>", "<group>", "<formgroup>", "<container>"],
-        answer: "<fieldset>"
+    { 
+        question: 'Which tag is used to link an external CSS file?', 
+        options: ['<link>', '<style>', '<css>', '<head>'], 
+        answer: '<link>' 
     },
-    {
-        question: "What will be the output of this HTML?",
-        code: "<abbr title='World Health Organization'>WHO</abbr>",
-        options: [
-            "Displays 'WHO' with no effect",
-            "Displays 'WHO' with a tooltip when hovered",
-            "Displays 'World Health Organization'",
-            "Displays 'WHO' in italics"
-        ],
-        answer: "Displays 'WHO' with a tooltip when hovered"
+    { 
+        question: 'What does the `target="_blank"` attribute do in an anchor tag?', 
+        options: ['Opens in the same tab', 'Opens in a new tab', 'Creates a button', 'Adds an underline'], 
+        answer: 'Opens in a new tab' 
     },
-    {
-        question: "Which tag is used to define emphasized text in HTML?",
-        options: ["<em>", "<i>", "<b>", "<strong>"],
-        answer: "<em>"
+    { 
+        question: 'What will the following code do?', 
+        code: '&lt;input type="checkbox"&gt;', 
+        options: ['Creates a text box', 'Creates a checkbox', 'Creates a radio button', 'Creates a dropdown'], 
+        answer: 'Creates a checkbox' 
+    },
+    { 
+        question: 'Which tag is used to create an interactive text field?', 
+        options: ['<input>', '<text>', '<field>', '<textarea>'], 
+        answer: '<input>' 
     }
 ];
 

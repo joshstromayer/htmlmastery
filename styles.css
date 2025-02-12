@@ -173,6 +173,10 @@ footer {
     color: var(--footer-text-color);
 }
 
+footer p a {
+    color: white;
+}
+
 /* Score Display */
 #score-tracker {
     font-size: 18px;
