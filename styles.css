@@ -1,0 +1,207 @@
+:root {
+    --bg-color: #222;
+    --text-color: #ffffff;
+    --button-bg: #1e90ff;
+    --button-text: #ffffff;
+    --container-border: 1px solid white;
+    --answer-button-bg-color: white;
+
+    --code-example-bg-color: #333;
+    --code-example-border-left: 4px solid #007bff;
+    --code-example-color: #f4f4f4;
+
+    --footer-bg-color: #222;
+    --footer-text-color: #ffffff;
+}
+
+/* Light Mode (When Data Attribute is Set) */
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-bg: #007bff;
+    --button-text: #ffffff;
+    --container-border: 1px solid #222;
+    --answer-button-bg-color: darkgrey;
+
+    --code-example-bg-color: #f4f4f4;
+    --code-example-border-left: 4px solid #007bff;
+    --code-example-color: #333;
+
+    --footer-bg-color: #222;
+    --footer-text-color: #ffffff;
+}
+
+/* General Styling */
+
+html, body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden; /* Prevents scrolling */
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+h1 {
+    font-weight: 500;
+}
+
+#theme-toggle {
+    position: absolute;
+    float: right;
+    padding: 10px 15px;
+    top: 15px;
+    right: 15px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#theme-toggle:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Button in Light Theme */
+[data-theme="light"] #theme-toggle {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Hover Effect in Light Mode */
+[data-theme="light"] #theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Question Text */
+h2 {
+    font-size: 22px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 0;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Quiz Container */
+#quiz-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 450px;
+    height: auto;
+    margin: 10px;
+    border: var(--container-border);
+    margin-bottom: 10px;
+}
+
+/* Answer Buttons */
+.answer-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.answer-button:hover {
+    background-color: #f1f1f1;
+}
+
+.answer-button:disabled {
+    cursor: not-allowed;
+}
+
+/* Next Button */
+#next-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#next-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    max-width: calc(100% - 20px);
+    bottom: 0;
+    margin-top: auto;
+    padding: 10px;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+/* Score Display */
+#score-tracker {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.code-example {
+    background-color: var(--code-example-bg-color);
+    border-left: var(--code-example-border-left);
+    padding: 10px;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+.code-example pre {
+    margin: 0;
+    text-align: left;
+}
+
+.code-example code {
+    color: var(--code-example-color);
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    #theme-toggle {
+        top: 15px;  /* Move it further up */
+        right: 15px; /* Push it further into the corner */
+        padding: 6px 10px; /* Make it smaller */
+        font-size: 18px;  /* Reduce text size */
+    }
+}
