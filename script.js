@@ -135,6 +135,12 @@ const questions = [
     }
 ];
 
+function decodeHtmlEntities(str) {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = str;
+    return txt.value;
+}
+
 // 2. Shuffle Questions
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -205,18 +211,34 @@ function displayQuestion() {
     answerOptions.innerHTML = "";
 
     // Create answer buttons
+// Create answer buttons
 currentQuestion.options.forEach(option => {
     const button = document.createElement("button");
-    button.innerHTML = option; // ✅ Use innerHTML instead of innerText
+
+    // ✅ Correctly decode HTML entities for display and selection
+    button.innerHTML = option;  
     button.classList.add("answer-button");
-    button.onclick = () => selectAnswer(button, currentQuestion.answer);
+    
+    // ✅ Decode both when checking the answer
+    button.onclick = () => selectAnswer(button, decodeHtmlEntities(currentQuestion.answer));
+
     answerOptions.appendChild(button);
 });
 }
 
 // 6. Handle Answer Selection
+function decodeHtmlEntities(str) {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = str;
+    return txt.value;
+}
+
 function selectAnswer(button, correctAnswer) {
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
+
+    // ✅ Decode both the selected answer and the correct answer
+    const selectedOption = decodeHtmlEntities(button.innerHTML.trim()); 
+    const decodedCorrectAnswer = decodeHtmlEntities(correctAnswer.trim());
 
     // ✅ Track unique questions seen (only adds the first time)
     uniqueQuestionsSet.add(currentQuestion.question);
@@ -224,7 +246,7 @@ function selectAnswer(button, correctAnswer) {
     // ✅ Increase total unique questions seen (Y)
     uniqueQuestionsSeen++;
 
-    if (button.innerText === correctAnswer) {
+    if (selectedOption === decodedCorrectAnswer) {
         button.style.backgroundColor = "lightgreen"; // Correct answer
         correctAnswers++; // Increase total correct answers (X)
 
@@ -240,7 +262,7 @@ function selectAnswer(button, correctAnswer) {
 
         // Highlight correct answer
         Array.from(answerOptions.children).forEach(btn => {
-            if (btn.innerText === correctAnswer) {
+            if (decodeHtmlEntities(btn.innerHTML.trim()) === decodedCorrectAnswer) {
                 btn.style.backgroundColor = "lightgreen";
             }
         });
